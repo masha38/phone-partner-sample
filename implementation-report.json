@@ -1,0 +1,65 @@
+{
+  "schema_version": "7.0",
+  "implementation_summary": {
+    "selected_runtime": "html",
+    "language": "javascript",
+    "styling": "plain_css",
+    "deployment_assumption": "GitHub Pages 정적 호스팅",
+    "reason": "기존 프로젝트가 빌드 없는 단일 정적 랜딩페이지이며 빠른 샘플 배포가 목적"
+  },
+  "assumptions": [
+    "휴대폰 구매와 파트너 활동은 구분되며 활동은 선택 사항",
+    "폼 endpoint와 analytics provider는 아직 제공되지 않음",
+    "표시된 보상 숫자는 실제 지급액이 아니라 구조 설명용 예시"
+  ],
+  "spec_validation": {
+    "pass": true,
+    "errors": [],
+    "warnings": ["실제 상담 endpoint 미연동", "실제 전산·정산 화면 미제공"],
+    "human_review_required": ["최신 보상 규정과 계산 예시 일치 여부", "개인정보 처리방침 URL"]
+  },
+  "cta_contract": [
+    {"id":"hero_consult","label":"내 조건 무료로 확인하기","commitment_level":2,"action":"scroll","target":"#consult","analytics_event":"hero_cta_click","fallback":"#consult"},
+    {"id":"hero_structure","label":"구조 먼저 보기","commitment_level":1,"action":"scroll","target":"#process","analytics_event":"mechanism_cta_click","fallback":"#process"},
+    {"id":"sticky_cta","label":"페이지 진행도별 변경","commitment_level":1,"action":"scroll","target":"dynamic_verified_id","analytics_event":"sticky_cta_click","fallback":"#consult"}
+  ],
+  "form_contract": {
+    "enabled": true,
+    "mode": "demo",
+    "fields": ["name", "phone", "interest", "contact_method", "privacy_consent"],
+    "validation": {"name":"required","phone":"010-0000-0000","consent":"required"},
+    "submit": {"endpoint":"","behavior":"integration_required"},
+    "success": {"enabled":false},
+    "error": {"field_errors":true,"integration_message":true}
+  },
+  "validation_report": {
+    "syntax": "passed",
+    "types": "not_applicable",
+    "build": "not_applicable",
+    "lint": "not_run",
+    "tests": "passed_manual_browser",
+    "cta_targets": "passed",
+    "asset_references": "passed",
+    "duplicate_ids": "passed"
+  },
+  "quality_check": {
+    "overall_pass": true,
+    "runtime_consistency_pass": true,
+    "v6_funnel_preservation_pass": true,
+    "mobile_conversion_pass": true,
+    "cta_contract_pass": true,
+    "asset_integrity_pass": true,
+    "proof_integrity_pass": true,
+    "claim_integrity_pass": true,
+    "accessibility_pass": true,
+    "dependency_minimization_pass": true,
+    "fake_proof_detected": false,
+    "unsupported_income_claim_detected": false,
+    "missing_asset_as_real_detected": false,
+    "dead_cta_detected": false,
+    "over_engineering_detected": false,
+    "revision_loops_used": 1,
+    "remaining_issues": ["실제 상담 endpoint와 개인정보 처리방침 URL 연결 필요"]
+  },
+  "unresolved_issues": ["상담 endpoint 필요", "개인정보 처리방침 URL 필요", "실제 전산·정산 화면 필요"]
+}

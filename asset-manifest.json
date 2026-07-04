@@ -1,0 +1,36 @@
+{
+  "assets": [
+    {
+      "asset_id": "phone_policy_example",
+      "path": "source/KakaoTalk_20260516_194925507_02.jpg",
+      "status": "available",
+      "role": "product_evidence",
+      "evidence_kind": "official_policy_sheet",
+      "fallback": "정책 자료는 상담 시 최신 적용일과 조건을 확인하도록 안내"
+    },
+    {
+      "asset_id": "company_intro",
+      "path": "source/KakaoTalk_20260621_161230374.jpg",
+      "status": "available",
+      "role": "company_reference",
+      "evidence_kind": "company_registration",
+      "fallback": "회사 소개는 지급 증거로 사용하지 않음"
+    },
+    {
+      "asset_id": "official_plan",
+      "path": "source/테라스타 보상플랜_202602 요약본.pdf",
+      "status": "available",
+      "role": "plan_document",
+      "evidence_kind": "official_plan_document",
+      "fallback": "문서를 열 수 없으면 상담 시 최신 공식본 요청"
+    },
+    {
+      "asset_id": "system_screenshot",
+      "path": "",
+      "status": "missing",
+      "role": "settlement_proof",
+      "evidence_kind": "system_screenshot",
+      "fallback": "자료 확인 필요 상태를 표시하며 가짜 화면을 생성하지 않음"
+    }
+  ]
+}
