@@ -1,0 +1,13 @@
+.tools/
+review-preview.png
+preview-server.js
+review.html
+review.css
+visual-funnel-*.js
+visual-funnel-*.json
+generate-visual-plan.js
+README.md
+source/*
+!source/KakaoTalk_20260516_194925507_02.jpg
+!source/KakaoTalk_20260621_161230374.jpg
+!source/테라스타 보상플랜_202602 요약본.pdf
